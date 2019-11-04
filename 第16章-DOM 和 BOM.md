@@ -1,4 +1,4 @@
-# DOM
+# DOM 
 
 Document Object Model   -   文档对象模型
 
@@ -212,7 +212,7 @@ let myChildNodes = el => {
 - document.createElement( <节点> ) ：创建节点
 - <父节点>.appendChild( <子节点> )   : 将子节点添加到父节点的最后
 -   document.createTextNode( <文本内容> )   ：创建文本节点，等同于 innerText
--   <父节点>.insertBefore( <新创建节点> , <子节点> )   ：将新创建的节点插入指定子节点的前面
+-   <父节点>.insertBefore( <新创建节点> , <子节点> )   ：将新创建的节点插入指定子节点的前面（ 第二个参数使用 null，会将节点添加到父节点的最后 ）
 -   <父节点>.replaceChild( <新创建节点> , <子节点> )   ：使用新创建的节点 替换指定子节点
 -   < 父节点>.removeChild( <子节点> )   ：删除一个节点中的指定子节点
 -   <元素>.remove( )   ：删除某个节点
@@ -239,5 +239,166 @@ let myChildNodes = el => {
         oDiv.remove()
     </script>
 </body>
+```
+
+#### 封装insertAfter方法
+
+```js
+let insertAfter = (parentNode,newNode,refNode) => {
+    var oNext = refNode.nextElementSibling || refNode.nextSibling;
+    // insertBefore 方法的第二个参数为null时，则将新节点添加到父节点的最后
+    parentNode.insertBefore(newNode, oNext)
+}
+```
+
+## 8、cloneNode   
+
+- 克隆一个节点
+
+- 浅克隆 ：不克隆该元素的子元素 ( 该元素内的文本也不保留 )   
+
+- 深克隆 ：  克隆该元素以及元素中的所有子元素（包含文本内容）
+
+  ```js
+  var text = document.getElementById('text')
+  
+  // 浅克隆 - 参数不写默认为false
+  let newNode1 = text.cloneNode(false)
+  
+  // 深克隆 
+  let newNode2 = text.cloneNode(true)
+  ```
+
+
+## 9、文档碎片 - createDocumentFragment
+
+解决使用 appendChild 多次添加节点时，页面多次进行渲染的问题
+
+```html
+<!-- 普通写法 - 页面多次渲染 -->
+<body>
+    <div class="box">
+
+    </div>
+
+    <script>
+        let oBox = document.querySelector('.box')
+        let p1 = document.createElement('p')
+        let p2 = document.createElement('p')
+
+        oBox.appendChild(p1)
+        oBox.appendChild(p2)
+    </script>
+</body>
+
+
+<!-- 使用文档碎片 - 页面只进行一次渲染 -->
+<body>
+    <div class="box">
+
+    </div>
+
+    <script>
+        let oBox = document.querySelector('.box')
+        let p1 = document.createElement('p')
+        let p2 = document.createElement('p')
+
+        // 创建文档碎片
+        let fragment = document.createDocumentFragment()
+        // 先将所有节点添加到文档碎片中 - 不进行页面渲染
+        fragment.appendChild(p1)
+        fragment.appendChild(p2)
+        // 将文档碎片再添加到文档中
+        oBox.appendChild(fragment)
+    </script>
+</body>
+
+```
+
+
+
+# BOM
+
+Browser Object Model  -  浏览器对象莫模型 
+
+## 1、重要事件
+
+### onresize
+
+- 窗口大小改变时触发
+
+```js
+window.onresize = () => console.info(1)
+```
+
+### onscroll
+
+- 滚动条滚动时触发
+
+```js
+window.onscroll = () => console.info(1)
+```
+
+### onfocus/onblur
+
+- onfocus - 进入当前标签页时触发（包括切换标签页，从任务栏最大化浏览器时）
+
+- onblur - 离开当前标签页时触发 （包括切换标签页，将浏览器最小化到任务栏时）
+
+  常用来配合 title 做一些操作
+
+```js
+window.onfocus = () => {
+    document.title = "处于当前页面"
+}
+window.onblur = () => {
+	document.title = "快回来"
+}
+```
+
+## 2、重要对象
+
+###  location 
+
+获取/设置 URL相关的属性。 
+
+#### 四种跳转方式
+
+```js
+location="http://www.tanzhouedu.com"
+location.assign("http://www.tanzhouedu.com")
+location.replace("http://www.tanzhouedu.com")
+location.href = "http://www.tanzhouedu.com"
+```
+
+#### location 中的常用属性
+
+```js
+location.pathname  // url中端口号后的部分
+
+location.search  // url中的参数部分
+
+location.host   // 带端口号的服务器地址
+```
+
+### history
+
+控制页面的前进、后退、刷新
+
+```js
+history.forward() // 前进一个页面
+
+history.back() // 后退一个页面
+
+history.go( 0 )  // 刷新页面
+history.go( n )  // 前进/后退n个页面 
+```
+
+###  navigator 
+
+ 获取浏览器相关的信息
+
+```js
+navigator.userAgent   // 浏览器信息
 ```
 
