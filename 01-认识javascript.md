@@ -99,9 +99,16 @@ NodeJs是后端语言，以JS代码来驱动底层C语言实现后端功能…�
 ### 5、console 控制台输出
 
 - console.log  普通输出
+
 - console.info   前面出现蓝色标记（ 在 chrome 上与 console.log 无区别）
+
 - console.warn  输出背景为黄色，警告信息
+
 - console.error  输出背景为红色，错误信息
+
+-  console.dir  可以显示一个对象所有的属性和方法。 
+
+  console.log()可以取代alert()或document.write()，在网页脚本中使用console.log()时，会在浏览器控制台打印出信息。 
 
 ##### 快速生成代码片段：
 
@@ -143,7 +150,7 @@ confirm("是否确认")
 
 ### 7、js注意事项
 
-- 严格区分大小写 ( var x=1;var X=1; x和X不是同一个变量)
+- 严格区分大小写 ( x=1;X=1; x和X不是同一个变量)
 - 语法字符使用英文字符，半角字符  
 - 缩进对齐
 - 分号结尾 （可以不加，看个人或团队开发习惯而定）
