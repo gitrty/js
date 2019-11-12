@@ -200,11 +200,13 @@ var oBox = document.getElementById("box")
 oBox.classList.add("active")
 // 给box元素 移除一个 class active
 oBox.classList.remove("active")
+// 切换 （有则删除，没有就添加）
+oBox.classList.toggle("active")
+// 判断是否存在 class （返回true或false）
+oBox.classList.contains("active")
 ```
 
 注：classList 方法仅支持 IE10 +
-
-注：判断一个元素 是否存在 某个 class  ===>  `<el>.classList.contains( "<class>" )`,返回值为 true 或 false
 
 ### 6、获取元素的css样式
 
@@ -264,4 +266,16 @@ disabled 和 checked 操作通过 true / false 控制
     </script>
 </body>
 ```
+
+
+
+# 作业
+
+hover实现不了的效果：
+
+<[https://gitrty.github.io/js-work/01-hover%E5%AE%9E%E7%8E%B0%E4%B8%8D%E4%BA%86%E7%9A%84%E6%95%88%E6%9E%9C.html](https://gitrty.github.io/js-work/01-hover实现不了的效果.html) >
+
+
+
+
 

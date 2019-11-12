@@ -138,13 +138,17 @@ function removeCookie(cname) {
 
 - localStorage 会可以将第一次请求的数据直接存储到本地，这个相当于一个 5M 大小的针对于前端页面的数据库，相比于 cookie 可以节约带宽，但是这个却是只有在高版本的浏览器中才支持的。
 
-## **2、局限**
+
+
+## 2、局限
 
 - 浏览器的大小不统一，并且在 IE8 以上的 IE 版本才支持 localStorage 这个属性。 
 - 目前所有的浏览器中都会把localStorage的值类型限定为string类型，这个在对我们日常比较常见的JSON对象类型需要一些转换。
 - localStorage在浏览器的隐私模式下面是不可读取的。 
 - localStorage本质上是对字符串的读取，如果存储内容多的话会消耗内存空间，会导致页面变卡。 
 - localStorage不能被爬虫抓取到。
+
+
 
 ## 3、创建、读取、删除localStorage
 
