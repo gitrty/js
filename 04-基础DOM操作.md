@@ -260,8 +260,11 @@ disabled 和 checked 操作通过 true / false 控制
         var ipt1 = document.getElementById('ipt1')
         var ipt2 = document.getElementById('ipt2')
         document.body.onclick = function () {
-            ipt1.disabled = !ipt1.disabled;     
-            ipt2.checked = !ipt2.checked;
+             ipt1.disabled = '';     
+             ipt2.checked = false;
+            
+            // ipt1.disabled = !ipt1.disabled;     
+            // ipt2.checked = !ipt2.checked;
         }
     </script>
 </body>
@@ -271,11 +274,7 @@ disabled 和 checked 操作通过 true / false 控制
 
 # 作业
 
-hover实现不了的效果：
+[hover实现不了的效果]([https://gitrty.github.io/js-work/01-hover%E5%AE%9E%E7%8E%B0%E4%B8%8D%E4%BA%86%E7%9A%84%E6%95%88%E6%9E%9C.html](https://gitrty.github.io/js-work/01-hover实现不了的效果.html) )
 
-<[https://gitrty.github.io/js-work/01-hover%E5%AE%9E%E7%8E%B0%E4%B8%8D%E4%BA%86%E7%9A%84%E6%95%88%E6%9E%9C.html](https://gitrty.github.io/js-work/01-hover实现不了的效果.html) >
-
-
-
-
+[动态菜单]( [https://gitrty.github.io/js-work/03-%E5%8A%A8%E6%80%81%E8%8F%9C%E5%8D%95.html](https://gitrty.github.io/js-work/03-动态菜单.html) )
 
