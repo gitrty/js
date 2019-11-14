@@ -276,6 +276,6 @@ disabled 和 checked 操作通过 true / false 控制
 
 [hover实现不了的效果](https://gitrty.github.io/js-work/01-hover%E5%AE%9E%E7%8E%B0%E4%B8%8D%E4%BA%86%E7%9A%84%E6%95%88%E6%9E%9C.html)
 
-[动态菜单]( https://gitrty.github.io/js-work/03-%E5%8A%A8%E6%80%81%E8%8F%9C%E5%8D%95.html )
+[动态菜单](https://gitrty.github.io/js-work/03-%E5%8A%A8%E6%80%81%E8%8F%9C%E5%8D%95.html)
 
 
