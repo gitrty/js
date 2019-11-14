@@ -87,6 +87,8 @@ function removeCookie(cname) {
 
 ## 4、注意
 
+cookie在存储时，需要转换为字符串类型，所以否则对象和数组将被强制转换为 `[object Object]`
+
 - **cookie在创建时需要 JSON.stringify()将json转换为字符串**  
 
 - **cookie在接收时需要 JSON.parse() 将字符串转换为json**
