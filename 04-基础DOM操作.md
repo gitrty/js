@@ -274,9 +274,8 @@ disabled 和 checked 操作通过 true / false 控制
 
 # 作业
 
-[hover实现不了的效果]([https://gitrty.github.io/js-work/01-hover%E5%AE%9E%E7%8E%B0%E4%B8%8D%E4%BA%86%E7%9A%84%E6%95%88%E6%9E%9C.html](https://gitrty.github.io/js-work/01-hover实现不了的效果.html) )
+[hover实现不了的效果](https://gitrty.github.io/js-work/01-hover%E5%AE%9E%E7%8E%B0%E4%B8%8D%E4%BA%86%E7%9A%84%E6%95%88%E6%9E%9C.html)
 
-[动态菜单]( [https://gitrty.github.io/js-work/03-%E5%8A%A8%E6%80%81%E8%8F%9C%E5%8D%95.html](https://gitrty.github.io/js-work/03-动态菜单.html) )
+[动态菜单]( https://gitrty.github.io/js-work/03-%E5%8A%A8%E6%80%81%E8%8F%9C%E5%8D%95.html )
 
-[商品价格计算](https://afeifeifei.github.io/class-demo/js-demo/2-03-03/%E5%95%86%E5%93%81%E6%95%B0%E9%87%8F.html)
 
