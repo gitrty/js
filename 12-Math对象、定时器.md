@@ -88,3 +88,14 @@ document.onclick = function(){
     clearInterval(timer)    // 清除定时器
 }
 ```
+
+
+
+# 作业
+
+[抽奖](https://gitrty.github.io/js-work/21-%E4%B8%AD%E5%A5%96%E6%A6%82%E7%8E%87.html)
+
+[生成随机颜色](https://gitrty.github.io/js-work/22-%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E9%A2%9C%E8%89%B2.html)
+
+[轮播图](https://gitrty.github.io/js-work/23-%E8%BD%AE%E6%92%AD%E5%9B%BE.html)
+
