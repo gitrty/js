@@ -91,6 +91,30 @@ document.onclick = function(){
 
 
 
+##  requestAnimationFrame() 
+
+requestAnimationFrame() 浏览器专门为动画提供的API 浏览器会自动优化方法的调用 页面不是激活的状态下 动画暂停 有效节省CPU开销 用法与setTimeout相似 只是不需要设置时间间隔
+
+- cancelAnimationFrame()   -> 清除动画
+
+```js
+// 复合动画帧的计时器,使得动画更流畅,也只是执行一次
+let timer = 0
+let a = 0
+function fun(){
+    a++
+    console.log(a)
+    timer = requestAnimationFrame(fun)
+}
+fun()
+document.onclick=()=>{
+    console.log("定时器停止了")
+    cancelAnimationFrame(timer)
+}
+```
+
+### 
+
 # 作业
 
 [抽奖](https://gitrty.github.io/js-work/21-%E4%B8%AD%E5%A5%96%E6%A6%82%E7%8E%87.html)
@@ -98,4 +122,6 @@ document.onclick = function(){
 [生成随机颜色](https://gitrty.github.io/js-work/22-%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E9%A2%9C%E8%89%B2.html)
 
 [轮播图](https://gitrty.github.io/js-work/23-%E8%BD%AE%E6%92%AD%E5%9B%BE.html)
+
+[广告倒计时](https://gitrty.github.io/js-work/25-%E5%B9%BF%E5%91%8A%E5%80%92%E8%AE%A1%E6%97%B6.html)
 

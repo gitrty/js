@@ -2,6 +2,8 @@
 
 ## 1、什么是 Cookie？
 
+Cookie 是在 **HTTP 协议**（flie协议下不生效）下，服务器或脚本可以维护客户工作站上信息的一种方式。 
+
 Cookie 是一些数据, 存储于你电脑上的文本文件中。
 
 当 web 服务器向浏览器发送 web 页面时，在连接关闭后，服务端不会记录用户的信息。
@@ -28,6 +30,9 @@ username='Tom'
 ```js
 // 创建 cookie ，并设置过期时间 
 document.cookie = "username=Tom; expires=Thu, 18 Dec 2043 12:00:00 GMT"
+
+// 不设置过期时间，默认浏览器关闭时清除 cookie 
+document.cookie = "username=Tom;"
 ```
 
 - 如果不设置过期时间则默认关闭浏览器删除 cookie 
@@ -140,7 +145,9 @@ cookie在存储时，需要转换为字符串类型，所以否则对象和数�
 
 - localStorage 会可以将第一次请求的数据直接存储到本地，这个相当于一个 5M 大小的针对于前端页面的数据库，相比于 cookie 可以节约带宽，但是这个却是只有在高版本的浏览器中才支持的。
 
+- **localstorage支持flie协议**
 
+  
 
 ## 2、局限
 
@@ -153,6 +160,8 @@ cookie在存储时，需要转换为字符串类型，所以否则对象和数�
 
 
 ## 3、创建、读取、删除localStorage
+
+ localStorage 用于长久保存整个网站的数据，保存的数据没有过期时间，直到手动去删除。 
 
 #### 创建
 
@@ -172,3 +181,12 @@ var lastname = localStorage.getItem("key");
 localStorage.removeItem("key")
 ```
 
+
+
+
+
+# 作业
+
+[cookie注册页面](https://gitrty.github.io/js-work/35-1-%E5%B8%A6cookie%E7%9A%84%E6%B3%A8%E5%86%8C%E9%A1%B5%E9%9D%A2.html)
+
+[cookie登录页面](https://gitrty.github.io/js-work/35-2-%E5%B8%A6cookie%E7%9A%84%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2.html)

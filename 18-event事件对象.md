@@ -296,6 +296,10 @@ window.onload = function(){ alert('onload') }
 window.onready( function(){ alert('ok') } )
 ```
 
+
+
 # 作业：
 
-盒子拖拽
+[盒子拖拽](https://gitrty.github.io/js-work/29-%E7%9B%92%E5%AD%90%E6%8B%96%E6%8B%BD.html)
+
+[面向对象的盒子拖拽](https://gitrty.github.io/js-work/30-ES6%E7%9B%92%E5%AD%90%E6%8B%96%E6%8B%BD.html)

@@ -402,3 +402,11 @@ history.go( n )  // 前进/后退n个页面
 navigator.userAgent   // 浏览器信息
 ```
 
+
+
+# 作业
+
+[节点操作](https://gitrty.github.io/js-work/26-%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C.html)
+
+
+
