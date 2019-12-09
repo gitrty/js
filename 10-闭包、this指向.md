@@ -100,9 +100,23 @@ var b = a()
 b()    // 1
 ```
 
+###### 手动回收 闭包中使用的变量
 
+- 将接收内部函数的变量设为null
 
+  ```js
+  function a(){
+      var x = 1
+      return function(){
+          x++    // x始终不会被回收
+      }
+  }
+  
+  var fn = a()
+  fn = null   // 手动回收
+  ```
 
+  
 
 ## 二、this指向
 

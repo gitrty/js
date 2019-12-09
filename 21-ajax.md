@@ -277,10 +277,10 @@ fn2()
     return fn5()
 }).then(data => {
     console.info(data)
-}).catch(){
+}).catch(err=>{
     // catch 可以捕捉到每个 Promise 中的 rej ，所以写在最后即可
     console.info('rej之后出发的函数')
-}
+})
 
 console.info(1);
 ```

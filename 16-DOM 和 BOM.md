@@ -274,6 +274,8 @@ let insertAfter = (parentNode,newNode,refNode) => {
 
 解决使用 appendChild 多次添加节点时，页面多次进行渲染的问题
 
+**使用 DocumentFragment 处理节点，速度和性能远远优于直接操作 DOM。**
+
 ```html
 <!-- 普通写法 - 页面多次渲染 -->
 <body>

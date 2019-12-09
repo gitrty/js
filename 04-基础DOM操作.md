@@ -85,7 +85,7 @@ style ：使用 style.xxx
 
 ##### 2 - 自定义标签属性的操作（也可操作合法标签属性）
 
-.getAttribute() 
+.getAttribute()
 
 .setAttribute()
 
@@ -179,6 +179,14 @@ window.onresize = function(){
 }
 ```
 
+##### 获取滚动条滚动的距离：（先了解）
+
+```js
+var t = document.documentElement.scrollTop   =》（不兼容ie写法）
+```
+
+ http://www.360totalsecurity.com/  的导航栏（学了if判断之后讲）
+
 ### 5、改变元素的css样式
 
 ```js
@@ -212,7 +220,7 @@ oBox.classList.contains("active")
 
 getComputedStyle( el )[attr]     获取到的样式属性为一个字符串  
 
-->   只能进行获取，不能赋值
+->   只能进行获取，不能赋值**（赋值会报错）**
 
 ```js
 var oBox = document.getElementById('box')
@@ -250,7 +258,7 @@ console.info(getComputedStyle(oBox).fontSize);		// 16px
 
 ### 8、disabled/checked 操作
 
-disabled 和 checked 操作通过 true / false 控制
+**disabled 和 checked 操作通过 true / false 控制**
 
 ```html
 <body style="height: 800px;">
@@ -266,6 +274,18 @@ disabled 和 checked 操作通过 true / false 控制
             // ipt1.disabled = !ipt1.disabled;     
             // ipt2.checked = !ipt2.checked;
         }
+    </script>
+</body>
+```
+
+**获取input框中的内容**
+
+```html
+<body>
+    <input type="text" value="" id="ipt1">
+    <script>
+        var ipt1 = document.getElementById('ipt1')
+        ipt1.value
     </script>
 </body>
 ```
